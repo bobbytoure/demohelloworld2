@@ -7,7 +7,8 @@ jobs: # a collection of steps
     docker: # run the steps with Docker
       #- image: circleci/openjdk:8-jdk-browsers # ...with this image as the primary container; this is where all `steps` will run
       #- image: circleci/jdk:8
-      - image: buildpack-deps:trusty
+      #- image: buildpack-deps:trusty
+      - image: circleci/jdk8:0.1.1
     steps: # a collection of executable commands
 
       - checkout # check out source code to working directory
