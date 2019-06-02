@@ -21,7 +21,8 @@ jobs: # a collection of steps
       #- run : mvn clean install -U
       - run: java -version #test bobby
       #- run: ls -lRt ~/.m2/
-      - run: ls -lRt ~/circleci-demo-java-spring/
+      #- run: ls -lRt ~/circleci-demo-java-spring/
+      - run: uname -a
       - run: mvn dependency:go-offline # gets the project dependencies
 
       - save_cache: # saves the project dependencies
