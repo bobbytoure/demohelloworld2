@@ -41,7 +41,7 @@ jobs: # a collection of steps
       #- run: sudo docker ps
       #- run: sudo systemctl status docker
       - setup_remote_docker
-      #- run: mvn clean compile com.google.cloud.tools:jib-maven-plugin:0.9.7:dockerBuild
+      - run: mvn clean compile com.google.cloud.tools:jib-maven-plugin:0.9.7:dockerBuild
 
       - store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
           # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
@@ -59,4 +59,5 @@ jobs: # a collection of steps
           uname -a
       #- run: docker run -it demohelloworld2:0.0.1-SNAPSHOT bash #never give hand back
       #- run: | docker exec -it demohelloworld2 bash
-      - run: docker run demohelloworld2:0.0.1-SNAPSHOT /bin/bash -c "netstat -ntlp ; exit"
+      #- run: docker run demohelloworld2:0.0.1-SNAPSHOT /bin/bash -c "netstat -ntlp ; exit"
+      - run: docker exec demohelloworld2:0.0.1 /bin/bash -c "netstat -ntlp ; exit"
