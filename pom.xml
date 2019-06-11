@@ -50,9 +50,12 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>0.9.7</version>
 				<configuration>
-					<to>
-						<image>hub.docker.com/eddiewebb/hello-spring:${version}-b${build.number}<
-					</to>
+					<from>
+						<image>circleci/openjdk:8-jdk-browsers</image>
+					</from>
+					<!--<to>
+						<image>hub.docker.com/bobbytoure/hello-spring:${version}-b${build.number}<
+					</to>-->
 				</configuration>
 			</plugin>
 		</plugins>
