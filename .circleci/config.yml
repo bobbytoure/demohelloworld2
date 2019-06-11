@@ -58,4 +58,5 @@ jobs: # a collection of steps
           docker ps
           uname -a
       - run: |
-          docker run -it demohelloworld2:0.0.1-SNAPSHOT bash
+          docker exec -it demohelloworld2:0.0.1 bash
+        #docker run -it demohelloworld2:0.0.1-SNAPSHOT bash
