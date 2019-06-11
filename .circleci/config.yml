@@ -32,13 +32,13 @@ jobs: # a collection of steps
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
 
       - run: mvn package # run the actual tests
-      - run: sudo apt update
+      #- run: sudo apt update
       #- run: sudo apt-get install -y docker
-      - run: sudo apt search docker
-      - run: sudo service --status-all
+      #- run: sudo apt search docker
+      #- run: sudo service --status-all
       #- run: sudo service docker status
-      - run: sudo ls -l /etc/init.d/
-      - run: sudo docker ps
+      #- run: sudo ls -l /etc/init.d/
+      #- run: sudo docker ps
       #- run: sudo systemctl status docker
       - run: mvn clean compile com.google.cloud.tools:jib-maven-plugin:0.9.7:dockerBuild
 
