@@ -58,6 +58,5 @@ jobs: # a collection of steps
           docker ps
           uname -a
       #- run: docker run -it demohelloworld2:0.0.1-SNAPSHOT bash #never give hand back
-      - run: |
-          docker exec -it demohelloworld2 bash
-      - run: docker exec -it demohelloworld2 uname -a
+      #- run: | docker exec -it demohelloworld2 bash
+      - run: docker run demohelloworld2 /bin/bash -c "netstat -ntlp"
