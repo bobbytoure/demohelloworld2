@@ -57,3 +57,4 @@ jobs: # a collection of steps
           docker run -d --name demohelloworld2 demohelloworld2:0.0.1-SNAPSHOT
           docker ps
           uname -a
+          docker run --network container:demohelloworld2 appropriate/curl --retry 10 --retry-connrefused http://localhost:8080
