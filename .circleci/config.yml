@@ -59,4 +59,4 @@ jobs: # a collection of steps
           uname -a
       #- run: docker run -it demohelloworld2:0.0.1-SNAPSHOT bash #never give hand back
       #- run: | docker exec -it demohelloworld2 bash
-      - run: docker run demohelloworld2:0.0.1-SNAPSHOT /bin/bash -c "netstat -ntlp"
+      - run: docker run demohelloworld2:0.0.1-SNAPSHOT /bin/bash -c "netstat -ntlp ; exit"
