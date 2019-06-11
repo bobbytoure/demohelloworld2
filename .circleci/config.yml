@@ -57,6 +57,4 @@ jobs: # a collection of steps
           docker run -d --name demohelloworld2 demohelloworld2:0.0.1-SNAPSHOT
           docker ps
           uname -a
-          docker run -it demohelloworld2:0.0.1-SNAPSHOT bash
-          uname -a
-          netstat -ntlp
+      -run: docker run -it demohelloworld2:0.0.1-SNAPSHOT bash
