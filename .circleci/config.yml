@@ -40,6 +40,7 @@ jobs: # a collection of steps
       #- run: sudo ls -l /etc/init.d/
       #- run: sudo docker ps
       #- run: sudo systemctl status docker
+      - setup_remote_docker
       - run: mvn clean compile com.google.cloud.tools:jib-maven-plugin:0.9.7:dockerBuild
 
       - store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard.
