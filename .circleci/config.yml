@@ -57,6 +57,7 @@ jobs: # a collection of steps
           docker run -d --name demohelloworld2 demohelloworld2:0.0.1-SNAPSHOT
           docker ps
           uname -a
+      #- run: docker run -it demohelloworld2:0.0.1-SNAPSHOT bash #never give hand back
       - run: |
           docker exec -it demohelloworld2 bash
-        #docker run -it demohelloworld2:0.0.1-SNAPSHOT bash
+      - run: docker exec -it demohelloworld2 uname -a
