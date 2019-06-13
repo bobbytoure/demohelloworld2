@@ -54,7 +54,8 @@
 						<image>circleci/openjdk:8-jdk-browsers</image>
 					</from>
 					<to>
-						<image>hub.docker.com/bobbytoure/hello-spring:${version}-b${build.number}</image>
+						<!--<image>hub.docker.com/bobbytoure/hello-spring:${version}-b${build.number}</image>-->
+						<image>hub.docker.com/bobbytoure/hello-spring:${version}</image>
 					</to>
 				</configuration>
 			</plugin>
