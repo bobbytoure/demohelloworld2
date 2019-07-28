@@ -34,7 +34,7 @@ jobs: # a collection of steps
             - ~/.m2
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
 
-      - run: mvn package -Djvm.options=-Xmx512 # run the actual tests
+      - run: mvn package # run the actual tests
       #- run: sudo apt update
       #- run: sudo apt-get install -y docker
       #- run: sudo apt search docker
