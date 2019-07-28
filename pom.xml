@@ -37,7 +37,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<jvmArguments>-Xss8m</jvmArguments>
+					<!--<jvmArguments>-Xss8m</jvmArguments>-->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -46,7 +46,7 @@
 				<version>2.22.1</version>
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
-					<!--<jvm>-Xss8m</jvm>-->
+					<jvm>-Xss8m</jvm>
 				</configuration>
 			</plugin>
 			<plugin>
