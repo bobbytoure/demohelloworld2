@@ -46,7 +46,9 @@
 				<version>2.22.1</version>
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
+					<!--
 					<argLine>-Dcom.sun.management.jmxremote.port=8004 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false</argLine>
+				    -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -54,6 +56,11 @@
 				<artifactId>jib-maven-plugin</artifactId>
 				<version>0.9.7</version>
 				<configuration>
+					<container>
+						<jvmFlags>
+							<jvmFlag>-Dcom.sun.management.jmxremote.port=8004 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false</jvmFlag>
+						</jvmFlags>
+					</container>
 					<from>
 						<image>circleci/openjdk:8-jdk-browsers</image>
 					</from>
