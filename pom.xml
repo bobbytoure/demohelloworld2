@@ -58,7 +58,7 @@
 				<configuration>
 					<container>
 						<jvmFlags>
-							<jvmFlag>-Dcom.sun.management.jmxremote.port=8004 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false</jvmFlag>
+							<jvmFlag>-Dcom.sun.management.jmxremote.port=8004</jvmFlag>
 						</jvmFlags>
 					</container>
 					<from>
