@@ -46,7 +46,7 @@
 				<version>2.22.1</version>
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
-					<jvm>-Xss8m</jvm>
+					<argLine>${jvm.options}</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
